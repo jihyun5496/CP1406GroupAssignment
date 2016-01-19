@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Untitled Document</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<link href="../Style/Globalstyle.css" rel="stylesheet" type=s"text/css" />
+</head>
+
+<body>
+<img src="../Images/bck.jpg" name="bgpic" width="1000" height="850" id="bgpic" />
+<div id="container">
+  <div id="banner">
+    <p class="Banner_Text"><img src="../Images/Dlogo-Transparent.png" width="201" height="151" /></p>
+  </div>
+
+<!-- TemplateBeginEditable name="navigationbar" -->
+
+<!--Navigation Bar Section-->  
+<nav>
+	<ul>
+		<li><a href="../index.html" id="onlink">Home</a></a></li>
+		<li><a href="../product.html">Product</a></a>
+			<ul>
+				<li><a href="#" >Flavors</a></li>
+   				<li><a href="#">Cakes</a></li>
+			   	<li><a href="#">Fried Ice Cream</a></li>
+   				<li><a href="#">Cookies</a></li>
+   				<li><a href="#">Sundae</a></li>
+   				<li><a href="#">Float</a></li>
+			</ul>
+		</li>
+        <li><a href="#">Order Form</a></li>
+		<li><a href="../services.html">Services</a></a></li>
+		<li><a href="#">Feedback</a></li>
+        <li><a href="../About Us.html">About Us</a></a></li>
+        <li><a href="#">Contact</a></li>
+	</ul>
+</nav>
+<!--End of Navigation Bar-->
+
+    <p>&nbsp;</p>
+
+<!-- TemplateEndEditable -->
+
+    
+  <div id="maincontent"><!-- TemplateBeginEditable name="MainContent" -->
+    <p>This is Mainbody Content</p>
+  <!-- TemplateEndEditable --></div>
+  <div id="footer"> Copyright &copy; 2016 Diazepam Cafe All Rights Reserved   </div>
+</div>
+</body>
+</html>
