@@ -1,20 +1,85 @@
 @charset "utf-8";
+@import url("../webfonts/From_Cartoon_Blocks/stylesheet.css");
+@import url("../webfonts/Minimal/stylesheet.css");
 /* CSS Document */
 
 #container {
 	background-color: transparent;
 	margin: auto;
-	width: 950px;
+	width: 950px;	
+}	
 
-	
+
+#slide{
+	width:900px;
+	height:431px;
+	position:relative;
 }
+
+#slide ul{
+	width: 716px;
+	height: 431px;
+	list-style: none outside none;
+	position: relative;
+	overflow: hidden;
+	margin: 0;
+	border: medium groove;
+	padding: 0;
+	border-radius: 5px;
+}
+
+
+#slide li:first-child{
+	display:list-item;
+	position:absolute;
+}
+
+
+#slide li{
+	position:absolute;
+	display:none;
+}
+	  
+#slide .prevButton{
+		height:50px;
+		width:50px;
+		position:absolute;
+		background:url('../Images/arrow_left.png') no-repeat;
+		background-size: 50px 50px;
+		top:50%;
+		margin-top:-36px;
+		cursor:pointer;
+		z-index:2000;
+		background-position:left top;
+		left:0
+	}
+
+
+#slide .prevButton:hover{ 
+		background-position:left bottom;left:0;
+}	  
+
+#slide .nextButton{
+	height:50px;
+	width:50px;
+	position:absolute;
+	background:url('../Images/arrow_right.png') no-repeat;
+	background-size: 50px 50px;
+	top:50%;
+	margin-top:-36px;
+	cursor:pointer;
+	z-index:2000;
+	background-position:right top;
+	right:0
+}
+
+#slide .nextButton:hover{background-position:right bottom;right:0;}
+
 
 #banner {
 	background-color:transparent;
 	width: 950px;
-	float: center;
-	font-family: "Times New Roman", Times, serif;
-	font-size: xx-large;
+	height:auto;
 	text-align: center;
 	vertical-align:central;
 	background-repeat: repeat;
@@ -22,45 +87,106 @@
 	background-position: center center;
 }
 
-.Banner_Text {
-	font-family: "Kool Beans";
-	font-size: 48px;
-	color: #0C1033;
-	font-weight: bold;
-	text-align: center;
-	vertical-align:central;
+nav ul ul {
+	display: none;
+}
+
+	nav ul li:hover > ul {
+		display: block;
 	}
 
-#nav_bar {
+nav ul {
+	background: #FFFFFF; 
+	background: linear-gradient(top, #FFFFFF 0%, #036 100%);  
+	background: -webkit-linear-gradient(top, #FFFFFF 0%,#efefef 50%); 
+	box-shadow: 0px 0px 9px rgba(0,0,0,0.15);
+	border-radius: 10px;  
+	list-style: none;
+	position: relative;
+	display: inline-table;
 	background-color: #FFF;
-	width: 950px;
-	height: 50px;
+	width: 910px;
+	height: 10px;
 	float: left;
-	font-size: large;
+	font-size: 32px;
+	font-weight:700;
+	font-family:"Jenna Sue";
 	margin-bottom:5px;
 }
-.nav_text {
-	font-family: "Jenna Sue";
-	font-size: 36px;
-	text-align: center;
-	font-weight: 900;
-	color: #036;
+
+nav ul :after {
+	content: "";
+	clear: both; 
+	display: block;
 }
-.nav_text a:hover {
-	font-family: "Jenna Sue";
-	color: #5BA9D9;
-	font-size: 36px;
-	font-weight: 900;
-	text-align: center;
+
+nav ul li {
+	float: left;
+}
+
+nav ul li:hover {
+	background: #036;
+	background: linear-gradient(top, #139 0%,#036 80%);
+	background: -webkit-linear-gradient(top, #139 0%,#036 80%);
+}
+
+nav ul li:hover a {
+	color: #fff;
 }
 	
+nav ul li a {
+	display: block; 
+	padding: 25px 30px;
+	color: #036; 
+	text-decoration: none;
+}
 
+nav ul ul {
+	border-radius: 0px; padding: 0;
+	position: absolute;
+	width: 215px;
+	font-weight: 500;
+	top:100%;
+}
+	nav ul ul li {
+		background: #036;
+		float: none; 
+		border-top: 1px solid #047;
+		border-bottom: 1px solid #025;
+		position: relative;
+		z-index:1;
+	}
+		nav ul ul li a {
+			padding: 15px 40px;
+			color: #fff;
+		}
+			nav ul ul li a:hover {
+				background: #059;
+			}
+
+nav ul li a#onlink{
+	background: #189;
+	background: linear-gradient(top, #189 0%,#046 80%);
+	background: -webkit-linear-gradient(top, #189 0%,#046 80%);
+	color: #FFFFFF;
+}
+
+nav ul ul li a#onlink{
+	background: #059;
+}
+ 
+nav ul ul li a#onlink:hover{
+	background:#068;
+}
+
+	
 #maincontent {
 	background-color: #FFF;
 	width: 950px;
 	float: left;
 	text-align: left;
-	background:rgba(255,255,255,0.7);
+	background: rgba(255,255,255,0.7);
+	font-weight: normal;
 	
 }
 
@@ -78,27 +204,52 @@
 .indexHeading {
 	font-family: "Kool Beans";
 	font-size: 56px;
-	color: #FFB295;
+	color:#039;
 	font-weight: 900;
 	text-align: center;
-	
+	margin:30px;
+	margin-bottom: 35px;
 }
 
 .productHeading {
 	font-family: "Kool Beans";
 	font-size: 56px;
-	color: #FFB295;
+	color: #039;
 	font-weight: 900;
 	text-align: left;
 	padding-left: 40px;
 	margin-top:25px;
 }
 
-hr{
-	margin-top:-55px;
-	margin-left:30px;
-	width:900px;
-	color:#50C2E5;	
+.productImageHeader{
+	border-style:solid;
+	border-radius:20px;
+	margin-bottom:30px;
+}
+
+.aboutUsHeading{
+	font-family: "Kool Beans";
+	font-size: 56px;
+	color: #039;
+	font-weight: 900;
+	text-align: left;
+	padding-left: 40px;
+	margin-top:25px;
+}
+.aboutUstext {
+	font-family: Minimal;
+	font-size: 24px;
+	padding-left: 20px;
+	font-weight: bold;
+	color: #000;
+	padding-left:40px;
+}
+
+.aboutUsPic{
+	padding: 0px;
+	margin-right: 20px;
+	margin-left: 20px;
+	
 }
 
 .text_info {
@@ -125,6 +276,7 @@ hr{
 .grandOpening {
 	text-align: center;
 	padding-left: 15px;
+	margin-top: 10px;
 }
 .GrandOpeningText {
 	font-family: "Courier New", Courier, monospace;
@@ -200,63 +352,6 @@ hr{
 	padding-bottom: 35px;
 }
 
- #productnavbar {
-  width:905px;
- } 
-
- #productnavbar #navbarholder {
-  height:81px;
-  border-bottom:1px solid #000;
-  width:905px; 	
-  padding-left:25px; 
- } 
-
- #productnavbar #navbarholder ul {
-  list-style:none;
-  padding:0; 
- } 
-
- #productnavbar #navbarholder ul li a { 
-  text-decoration:none;
-  float:left;
-  margin-right:10px;
-  line-height:23px;
-  font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
-  font-weight: bold;
-  color:#FFF;
-  background:#1A48A6;
-  border:1px solid #000;
-  border-bottom:none;
-  padding:20px;
-  width:95px;
-  height:40px;
-  text-align:center;
-  display:block;
-  border-top-left-radius:10px;
-  border-top-right-radius:35px;
-  -webkit-border-top-left-radius:10px;
-  -webkit-border-top-right-radius:35px; 
- } 
-
- #productnavbar #navbarholder ul li a:hover {
-  background:#1CB7E7;
-  color:#FFF;
- } 
- 
- 
- #navbarholder ul li a#onlink {
-  background:#FFF;
-  color:#003369;
-  border-bottom:1px solid #FFF; 
-  font-weight: bold;
- } 
-
- #navbarholder ul li a#onlink:hover {
-  background:#FFF;
-  color:#000;
-  text-shadow:0.5px 0.5px 0.5px #000; 
- }
-
 
 .productheader2{
 	margin-top: 30px;
@@ -270,6 +365,7 @@ hr{
 	background-color: #FFF;
 	padding: 5px;
 	margin-left: 50px;
+	margin-bottom:30px;
 	padding-left: 20px;
 	width: 800px;
 	float: left;
@@ -331,4 +427,195 @@ hr{
 	text-align: left;
 	box-shadow: 8px 8px 10px #2A2A2A;
 	border-radius:10px;
+}
+.service_fnf_text {
+	font-family: "From Cartoon Blocks";
+	font-size: 40px;
+	color: #C0C;
+}
+
+.service_text {
+	font-family: Minimal;
+	font-size: 24px;
+	padding-left: 20px;
+	font-weight: bold;
+	color: #000;
+}
+.bold_text {
+	font-weight: bold;
+	font-family: Cambria, "Century Gothic";
+	color: #C03;
+	font-size: 24px;
+}
+.contact_text {
+	font-family: "Courier New", Courier, monospace;
+	font-size: 22px;
+	font-weight: bold;
+	color: #000;
+}
+.services_heading {
+	font-family: "From Cartoon Blocks";
+	font-size: 60px;
+	color: #C0C;
+}
+.services_line {
+	margin-top: 20px;
+}
+
+.family_icecream_img {
+	margin-top: -40px;
+	margin-left:50px;
+	float:right;
+	margin-right: 25px;
+	border-radius: 15px;
+}
+
+.email_pic {
+	margin-top: 20px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	margin-left: 70px;
+}
+.phone_pic {
+	margin-top: 20px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	margin-left: 60px;
+}
+.insta_pic {
+	margin-top: 20px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	margin-left: 60px;
+}
+.blue_line {
+	margin-left: -50px;
+	margin-bottom: 0px;
+	padding-bottom: -50px;
+	padding-left: 25px;
+}
+
+.twitter_pic {
+	margin-top: 20px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	margin-left: 70px;
+}
+.facebook_pic {
+	margin-top: 20px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	margin-left: 60px;
+}
+
+.map_pic {
+	margin-top: 20px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	margin-left: 100px;
+}
+.socailM_heading {
+	font-family: "Comic Sans MS", cursive;
+	font-size: 24px;
+	color: #039;
+}
+.orderForm{
+	font-family:Minimal;
+	font-size:18px;
+	font-weight:bold;
+	padding-left:40px;
+}
+.orderFormText{
+	font-family:Minimal;
+	font-size:18px;
+	font-weight:bold;
+}
+.contact a:hover{
+	font-family:Minimal;
+	font-size:18px;
+	font-weight:bold;
+	color:#5BA9D9;
+}
+.contact{
+	font-family:Minimal;
+	font-size:18px;
+	font-weight:bold;
+}
+.delivery_img {
+	margin-top: 10px;
+	margin-bottom:20px;
+	margin-left:50px;
+	border-radius:10px;
+}
+#servicesContainer{
+	background-color: #FFF;
+	padding: 5px;
+	margin-left: 50px;
+	margin-bottom:30px;
+	padding-left: 20px;
+	width: 800px;
+	float: left;
+	text-align: left;
+	box-shadow: 8px 8px 10px #2A2A2A;
+	border-radius: 10px;
+	border: thin dashed #000000;
+}
+.servicesDescription{
+	float:left;
+	margin-left: 25px;
+	margin-top: 90px;
+	position:absolute;
+	font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+}
+#servicesContainer2{
+	background-color: #FFF;
+	margin-left:10px;
+	margin-top:20px;
+	text-align: left;
+	border-radius:10px;
+	clear:both;
+}
+
+#servicesContainer3{
+	background-color: #FFF;
+	margin-left:10px;
+	margin-top:50px;
+	text-align: left;
+	border-radius:10px;
+	clear:both;
+}
+
+.servicesDescription3{
+	float:left;
+	margin-left: 25px;
+	margin-top: 100px;
+	position:absolute;
+	font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+}
+
+
+hr{
+	margin-top:-55px;
+	margin-left:30px;
+	width:900px;
+	color:#50C2E5;
+}
+
+.happyhour_img {
+	margin-top:-120px;
+	margin-left:50px;
+	float:right;
+	margin-right: 25px;
+	border-radius: 15px;
+}
+
+#flavorContainer{
+	margin:20px;
+	margin-bottom:50px;
+}
+
+.flavorThumbnail{
+	border-radius:100%;
+	margin:10px;
+	border-style:double;
 }
