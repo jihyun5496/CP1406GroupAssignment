@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/Master.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>HomePage</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+<link href="Style/Globalstyle.css" rel="stylesheet" type=s"text/css" />
+</head>
+
+<body>
+<img src="Images/bck.jpg" name="bgpic" width="1000" height="850" id="bgpic" />
+<div id="container">
+  <div id="banner">
+    <p class="Banner_Text"><img src="Images/Dlogo-Transparent.png" width="201" height="151" /></p>
+  </div>
+
+<!-- InstanceBeginEditable name="navigationbar" -->
+
+<!--Navigation Bar Section-->  
+<nav>
+	<ul>
+		<li><a href="index.html" id="onlink">Home </a></a></li>
+		<li><a href="product.html">Product</a></a>
+			<ul>
+				<li><a href="product.html" >Flavors</a></li>
+   				<li><a href="cakes.html">Cakes</a></li>
+			   	<li><a href="friedicecream.html">Fried Ice Cream</a></li>
+   				<li><a href="cookies.html">Cookies</a></li>
+   				<li><a href="sundae.html">Sundae</a></li>
+   				<li><a href="float.html">Float</a></li>
+			</ul>
+		</li>
+        <li><a href="orderForm.html">Order Form</a></li>
+		<li><a href="services.html">Services</a></a></li>
+		<li><a href="feedbackForm.html">Feedback</a></li>
+        <li><a href="About Us.html">About Us</a></a></li>
+        <li><a href="contact.html">Contact</a></li>
+	</ul>
+</nav>
+<!--End of Navigation Bar-->
+    <p>&nbsp;</p>
+
+<!-- InstanceEndEditable -->
+
+    
+  <div id="maincontent"><!-- InstanceBeginEditable name="MainContent" -->
+     	<p class="indexHeading">Welcome to Diazepam Cafe</p>
+    
+    <center>
+    <div id="slide">
+	<ul>
+	<li><img src="Images/Once-Upon-a-cream-Ice-Cream-Shop-Thailand-MADA-Design-Factory-1.png" width="716" height="431" class="slide" />
+    </li>
+	<li><img src="Images/Afogto-cafe-ice-cream-parlour-by-Dana-Shaked-Beer-Sheva-Israel-04.jpg" width="716" height="431" /></li>
+	<li><img src="Images/large.jpg" width="716" height="431" />	</li>
+	</ul>
+	<span class="button prevButton"></span>
+	<span class="button nextButton"></span>
+	</div>	     	
+    </center>
+    
+<script src="script/jquery-1.4.2.min.js"></script>
+
+<script>
+$(window).load(function(){
+		var pages = $('#slide li'), current=0;
+		var currentPage,nextPage;
+		var timeoutID;
+		var buttonClicked=0;
+
+		var handler1=function(){
+			buttonClicked=1;
+			$('#container .button').unbind('click');
+			currentPage= pages.eq(current);
+			if($(this).hasClass('prevButton'))
+			{
+				if (current <= 0)
+					current=pages.length-1;
+				else
+					current=current-1;
+				nextPage = pages.eq(current);	
+
+				nextPage.css("marginLeft",-716);
+				nextPage.show();
+				nextPage.animate({ marginLeft: 0 }, 800,function(){
+					currentPage.hide();
+				});
+				currentPage.animate({ marginLeft: 716 }, 800,function(){
+					$('#container .button').bind('click',handler1);
+				});
+			}
+			else
+			{
+
+				if (current >= pages.length-1)
+					current=0;
+				else
+					current=current+1;
+				nextPage = pages.eq(current);	
+
+				nextPage.css("marginLeft",716);
+				nextPage.show();
+				nextPage.animate({ marginLeft: 0 }, 800,function(){
+				});
+				currentPage.animate({ marginLeft: -716 }, 800,function(){
+					currentPage.hide();
+					$('#container .button').bind('click',handler1);
+				});
+			}		
+		}
+
+		var handler2=function(){
+			if (buttonClicked==0)
+			{
+			$('#container .button').unbind('click');
+			currentPage= pages.eq(current);
+			if (current >= pages.length-1)
+				current=0;
+			else
+				current=current+1;
+			nextPage = pages.eq(current);	
+			nextPage.css("marginLeft",716);
+			nextPage.show();
+			nextPage.animate({ marginLeft: 0 }, 800,function(){
+			});
+			currentPage.animate({ marginLeft: -716 }, 800,function(){
+				currentPage.hide();
+				$('#container .button').bind('click',handler1);
+			});
+			timeoutID=setTimeout(function(){
+				handler2();	
+			}, 4000);
+			}
+		}
+
+		$('#container .button').click(function(){
+			clearTimeout(timeoutID);
+			handler1();
+		});
+
+		timeoutID=setTimeout(function(){
+			handler2();	
+			}, 4000);
+		
+});
+
+</script>	  
+          
+    <p> <img src="Images/9.png" width="920" height="147" class="grandOpening" /></p>
+    <p class="GrandOpeningText"><strong>Grand Opening of Diazepam Cafe will be on 15th January 2016</strong> </p>
+    <p class="indexHeading">Upcoming Events:</p>
+    <table width="93%" border="0" class="table_text" align="center">
+      <tr>
+        <td width="232" class="table_text"><div align="right">24 December 2015</div></td>
+        <td width="50" class="table_text"></td>
+        <td width="642" class="table_text">Christmas and Gala event for sponsors</td>
+      </tr>
+      <tr>
+        <td class="table_text" style=""><div align="right">6 January 2016</div></td>
+        <td width="50" class="table_text"></td>
+        <td class="table_text">Ice-cream making Demonstration-Chief Chef Martin Polo (Free)</td>
+      </tr>
+      <tr>
+        <td class="table_text"><div align="right">8 January 2016</div></td>
+        <td width="50" class="table_text"></td>
+        <td class="table_text">Ice-cream tasting(free)</td>
+      </tr>
+      <tr>
+        <td class="table_text"><div align="right">10 January 2016</div></td>
+        <td width="50" class="table_text"></td>
+        <td class="table_text">Exclusive membership event</td>
+      </tr>
+      <tr>
+        <td class="table_text"><div align="right">12 January 2016</div></td>
+        <td width="50" class="table_text"></td>
+        <td class="table_text">Best Ice-cream cake baking competition</td>
+      </tr>
+      <tr>
+        <td class="table_text"><div align="right">5 February 2016</div></td>
+        <td width="50" class="table_text"></td>
+        <td class="table_text">Ice-cream making for children</td>
+      </tr>
+      <tr>
+        <td class="table_text"><div align="right">14 February 2016</div></td>
+        <td width="50" class="table_text"></td>
+        <td class="table_text">New flavour launch (Assorted Green tea)</td>
+      </tr>
+      <tr>
+        <td class="table_text"><div align="right">5 March 2016</div></td>
+        <td width="50" class="table_text"></td>
+        <td class="table_text">Ice-cream making competition for adults</td>
+      </tr>
+      <tr>
+        <td class="table_text"><div align="right">7 April 2016</div></td>
+        <td width="50" class="table_text"></td>
+        <td class="table_text">Ice-cream buffet</td>
+      </tr>
+      <tr>
+        <td class="table_text"><div align="right">25 April 2016</div></td>
+        <td width="50" class="table_text"></td>
+        <td class="table_text">Ice-cream decoration competition for children</td>
+      </tr>
+    </table>
+    <p class="indexcontext">&nbsp;</p>
+    <p class="context">&nbsp;</p>
+  <!-- InstanceEndEditable --></div>
+  <div id="footer"> Copyright &copy; 2016 Diazepam Cafe All Rights Reserved   </div>
+</div>
+</body>
+<!-- InstanceEnd --></html>
